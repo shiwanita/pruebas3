@@ -1,6 +1,9 @@
 ---
 - name: ping
-  hosts: all
+  hosts: 192.168.50.122
+  remote_user: shiwa
+  become: yes 
   tasks:
-    -name: ping
+    -name: copiar archivo
+     copy: src=/etc/hosts dest=/etc/hosts
      command: ping 
