@@ -1,0 +1,6 @@
+- name: Verificar conectividad a través de ping
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Realizar ping a los hosts
+      ping:
